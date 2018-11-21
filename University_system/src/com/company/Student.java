@@ -1,7 +1,7 @@
 package com.company;
 /** this class is responsible for students information and balance account
  * it shall interact with the following
- * 5 attributes: name, stcardId, grade, paidTuition, totalTuition
+ * 4 attributes: name, stcardId, grade, paidTuition
  */
 public class Student {
     //private:as I don't want to  outside student class for someone to
