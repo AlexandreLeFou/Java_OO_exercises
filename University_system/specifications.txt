@@ -17,4 +17,4 @@ name, tcardId, salary, age
 
 
 //Student object:
-name, stcardId, grade, paidTuition, totalTuition
+name, stcardId, grade, paidTuition

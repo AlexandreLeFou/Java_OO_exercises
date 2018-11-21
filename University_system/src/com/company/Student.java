@@ -10,7 +10,6 @@ public class Student {
     private int id;
     private int grade;
     private float paidTuition;
-    private float remainedΤuition;
 
     //InteliJ /**+Enter
     /** I initialize student object!
@@ -18,12 +17,10 @@ public class Student {
      * @param name : student's name
      * @param grade: student's grade
      * @param paidTuition:  $ student paided
-     * @param remainedΤuition: $ student's total(remained) sum
      */
 
     public Student(String name, int id, int grade) {
         this.paidTuition = 0; //initially 0 $ paid
-        this.remainedΤuition = 10000; //example of TOTAL $ tuition fees
         this.name = name;
         this.id = id;
         this.grade = grade;
@@ -56,22 +53,13 @@ public class Student {
         return paidTuition;
     }
 
-    //return student's remaining tuition
-    public float getremainedΤuition() {
-        return remainedΤuition-paidTuition;
-    }
+
 
     public void paidTuition(float tuitionFees){
         paidTuition += tuitionFees;
         University.setTotalBalanceGain(paidTuition);
     }
 
-    /** $ of fees paid to school
-     * return the remaining money to pay to school
-     */
-    public float remainedΤuition(){
-        return remainedΤuition-paidTuition;
-    }
 
     @Override
     public String toString() {
@@ -80,7 +68,6 @@ public class Student {
                 ", id=" + id +
                 ", grade=" + grade +
                 ", paidTuition=" + paidTuition +
-                ", remainedΤuition=" + remainedΤuition +
                 '}';
     }
 }
