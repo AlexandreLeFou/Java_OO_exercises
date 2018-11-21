@@ -61,4 +61,15 @@ public class Teacher {
         salaryEarned += salary;
         University.setTotalBalancePaid(salary);
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", salary=" + salary +
+                ", age=" + age +
+                ", salaryEarned=" + salaryEarned +
+                '}';
+    }
 }

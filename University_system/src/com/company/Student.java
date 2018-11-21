@@ -73,4 +73,14 @@ public class Student {
         return remainedΤuition-paidTuition;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", grade=" + grade +
+                ", paidTuition=" + paidTuition +
+                ", remainedΤuition=" + remainedΤuition +
+                '}';
+    }
 }

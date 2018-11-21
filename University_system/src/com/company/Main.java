@@ -8,6 +8,7 @@ public class Main {
         Teacher Alekos = new Teacher("Alexandros", 1, 1112.34f, 44);
         Teacher Maria = new Teacher("Marianthi", 2, 1000, 35);
         Teacher Babis = new Teacher("Xaralambos", 1, 700, 28);
+        Teacher Nikos = new Teacher("Nikolas", 1, 700, 28);
 
 
         List<Teacher> teacherList = new ArrayList<>();
@@ -27,6 +28,16 @@ public class Main {
 
 
         University duthprivate = new University(teacherList, studentList);
+
+        //===========================================================================//
+        //to add a teacher to a new university
+        Teacher Antonis = new Teacher("Antoine", 45, 2100, 59);
+        duthprivate.setTeachers(Antonis);
+        //to add a teacher to a new university
+        Student Fanula = new Student("Fani", 3333, 4);
+        duthprivate.setStudents(Fanula);
+        //===========================================================================//
+
 
         System.out.println("To DUTH private university εχει στο λογαριασμο διχως " +
                 "τα διδακτρα των μαθηματων:" +
@@ -54,6 +65,18 @@ public class Main {
                 "μετα την πληρωμη των καθηγητων:" +
                 Math.abs(duthprivate.getTotalBalancePaid()) + "$");
 
+        System.out.println("\n\n=====//=====\nTeacher Objects:");
+        System.out.println(Alekos);
+        System.out.println(Maria);
+        System.out.println(Babis);
+        System.out.println(Nikos); //salary 0 -> no execution of:  Nikos.paySalary(Nikos.getSalary());
+        //System.out.println(Antonis);
+
+        System.out.println("=====//=====\nStudent Objects:");
+        System.out.println(Panagiotis);
+        System.out.println(Makis);
+        System.out.println(Anna);
+        //System.out.println(Fanula);
     }
 
 
