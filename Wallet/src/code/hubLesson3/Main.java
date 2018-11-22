@@ -47,8 +47,8 @@ public class Main {
 
 
         }
-       // Wallet.totalAccount=122.3f;
-        //System.out.println(Wallet.totalAccount);
+        //Wallet.totalAccount=122.3f;
+       // System.out.println(Wallet.totalAccount);
        // System.out.println("Transaction completed.The wallet now has:" + wallet1.getTotalAccount() + "$");
     }
 }
