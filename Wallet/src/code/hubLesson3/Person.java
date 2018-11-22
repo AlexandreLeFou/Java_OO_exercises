@@ -1,9 +1,14 @@
 package code.hubLesson3;
 
+/**
+ * @name: name of a Person
+ * @productPrice: the price of an item he wants to buy
+ */
 
 public class Person {
     private String name;
     private float productPrice;
+
 
 
     //constructor
@@ -29,10 +34,8 @@ public class Person {
         this.productPrice = productPrice;
     }
 
-    /**
-     * @name: name of a Person
-     * @productPrice: the price of an item he wants to buy
-     */
+
+
 
 
 

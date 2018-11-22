@@ -1,7 +1,11 @@
 package code.hubLesson3;
 
+/**
+ * @accountMoney: our wallets initial money
+ */
+
 public class Wallet {
-    private float totalAccount;
+    private float totalAccount; //static float totalAccount;
     private float deposit;
     private float withdraw;
 
@@ -11,9 +15,6 @@ public class Wallet {
         this.totalAccount = totalAccount; //initially the wallet has 500$ (see main)
     }
 
-    /**
-     * @accountMoney: our wallets initial money
-     */
 
     public float getTotalAccount() {
         return totalAccount;
@@ -23,7 +24,7 @@ public class Wallet {
         this.totalAccount = totalAccount;
     }
 
-    public void depositAmmount(float deposit){
+    public  void depositAmmount(float deposit){ //***
         if (deposit<0){
             System.out.println("Wrong input, negative...");
         }else{
@@ -33,7 +34,7 @@ public class Wallet {
     }
 
 
-    public void withdrawAmmount(float withdraw){
+    public  void withdrawAmmount(float withdraw){ //****
         if (withdraw<0){
             System.out.println("Wrong input, negative...");
         }else if (withdraw>totalAccount){
