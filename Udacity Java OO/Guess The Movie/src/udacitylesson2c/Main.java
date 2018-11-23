@@ -28,9 +28,6 @@ public class Main {
                 while(scanner.hasNextLine()){//while it has a line to read repeat{
                     inputString = scanner.nextLine();
                     totalLines[c] = inputString;
-                   // txtLines.add(inputString);
-                    //totalLines[0] = "the shawshank redemption" ;
-                   // System.out.println(totalLines[c]);
                     c++;
                 }
                 int randomNumber = random.nextInt(24) - 1; //random number 0-24 from java util
@@ -53,17 +50,13 @@ public class Main {
                     char userInput2 = scannerInput.next().charAt(0);
                     System.out.println(String.valueOf(userInput2));
                     guessword.indexOf(userInput2);
+
                     if (guessword.indexOf(userInput2)==-1){
-                        System.out.println("Sorry, wrong guess :(\nRetry!\n"); }else{
+                        System.out.println("Sorry, wrong guess :(\nRetry!\n"); }
+                        else{
+
                         for (int j=0; j<charGuessWord.length;j++){
-                            if (charGuessWord[j]==userInput2) {
-                                //System.out.println("charGuessWord[j],userInput2:"+charGuessWord[j]+userInput2);
-                                charUserWord[j] = charGuessWord[j];
-                                //System.out.println("ok");
-                               // System.out.println("====>"+charUserWord[j]);
-                                }
-                            //System.out.print("ok"+charUserWord[j]);
-                           // System.out.println("ok");
+                            if (charGuessWord[j]==userInput2) { charUserWord[j] = charGuessWord[j]; }
                         }
                         System.out.println("Yep you found something!\n" + new String(charUserWord)+"\n");
                     }
@@ -71,15 +64,11 @@ public class Main {
 
                 System.out.println("Sorry, you lost, no more efforts! The movie to guess was: "+guessword);
 
-                //System.out.println("The movie to guess was:"+charGuessWord[1]);
-
-
-
+                scannerInput.close();
+                scanner.close();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-            }   catch (IndexOutOfBoundsException exception) {
-                System.out.print(" Index is out of bounds...");
-
             }
+
         }
 }
