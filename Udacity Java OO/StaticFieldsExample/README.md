@@ -1,0 +1,1 @@
+A simple java application ragarding the use of the static word and the scope of variables and methods.
