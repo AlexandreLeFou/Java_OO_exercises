@@ -14,7 +14,6 @@ public class Main {
         int c=0; //counter
         String inputString = null;
         String[] totalLines = new String[22]; //value altered according to each csv File(i.e.lines)
-        //String[] cSVLine = new String[22]; //value altered according to each csv File(i.e.lines)
         List<String> cSV1Line = new ArrayList<String>();
         List<String> cSV2Line = new ArrayList<String>();
         List<String> cSV3Line = new ArrayList<String>();
@@ -23,21 +22,20 @@ public class Main {
 
 
         String [] CsvSplit = new String[22]; //value altered according to each csv File(i.e.lines)
-        //  String[] totalLinesSplit = new String[22]; //value altered according to each csv File(i.e.lines)
-       // char[] charArray = new char[22];
-                File filetoOpen = new File ("example.csv");
         try {
+            File filetoOpen = new File ("example.csv");
+
             Scanner scannerInput = new Scanner(System.in); //user input scanner
             Scanner scanner = new Scanner(filetoOpen); //scanner regarding the file
             try{
                 //later on for option 1 for csv 2 for batabase
-            System.out.println("Hello my friend please press 1 to to continue:");
-            //int userInput2 = scannerInput.nextInt();
+            System.out.println("Hello my friend please press 1 to to continue:(later we shall ask: csv or db for something)");
+            int userInput2 = scannerInput.nextInt();
             }catch (InputMismatchException exception){
             System.out.print("Wrong Input");
             }
 
-            System.out.println("At first when I open the csv I store it in String format:");
+            System.out.println("I open the csv and have the following:");
              while(scanner.hasNextLine()){//while it has a line to read repeat...
                 inputString = scanner.nextLine();
                 totalLines[c] = inputString;
@@ -49,26 +47,46 @@ public class Main {
                  cSV3Line.add(CsvSplit[2]);
                  cSV4Line.add(CsvSplit[3]);
                  cSV5Line.add(CsvSplit[4]);
-               //System.out.println("->totalLines["+c+"] = "+totalLines[c]);
-                //System.out.println("->totalLinesSplit["+c+"] = "+totalLinesSplit[c]);
-
-                c++;
-            // totalLines[c].split(",");
+                 c++;
               }
+            System.out.println("Line 1:"+cSV1Line);
+            System.out.println("Line 2:"+cSV2Line);
+            System.out.println("Line 3:"+cSV3Line);
+            System.out.println("Line 4:"+cSV4Line);
+            System.out.println("Line 5:"+cSV5Line);
 
-            System.out.println(cSV1Line);
-            System.out.println(cSV1Line.get(1));
             System.out.println("\n===//===\n"); //beautiful command line separator
 
+            System.out.println("ok my friend now let's say you want some data(for now all you see are strings)");
+            System.out.println("Which line you want to display(1->22)?");//κανω στη switch ελεγχο εισοδου
+            int userInput3 = scannerInput.nextInt()-1; //-1 καθως αρχιζει η αριθμιση κανονικα απο το 0
+            System.out.println("Which element you want to display?\n 1.Full Name,2.Car Plate," +
+                    "3.Car Model,4.Date,5.Fine");//να κανω ελεγχο εισοδου
+            int userInput4 = scannerInput.nextInt()-1; //-1 καθως αρχιζει η αριθμιση κανονικα απο το 0
 
 
-//            System.out.println(totalLines[0].split(","));
+            switch (userInput3) {
+                case 1:
+                    System.out.println(cSV1Line.get(userInput4));
+                    break;
+                case 2:
+                    System.out.println(cSV2Line.get(userInput4));
+                    break;
+                case 3:
+                    System.out.println(cSV3Line.get(userInput4));
+                    break;
+                case 4:
+                    System.out.println(cSV4Line.get(userInput4));
+                    break;
+                case 5:
+                    System.out.println(cSV5Line.get(userInput4));
+                    break;
+                default:
+                    System.out.println("WRONG input ...");
+                    break;
+            }
 
-
-
-            //.split(",");//seperate values for each line according to the ","
-
-            System.out.println("ok");
+            //System.out.println("ok");
             scannerInput.close(); //close scanner for userinput
             scanner.close(); //close scanner regarding the file
         } catch (FileNotFoundException e) {
