@@ -1,1 +1,0 @@
-A basic command line Guess the Number game in order to learn and interact with the Scanner package/user input.
