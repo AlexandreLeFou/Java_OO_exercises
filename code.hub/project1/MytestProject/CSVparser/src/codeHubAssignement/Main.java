@@ -2,8 +2,11 @@ package codeHubAssignement;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+import java.io.*;
 
 public class Main {
 
@@ -11,15 +14,18 @@ public class Main {
         int c=0; //counter
         String inputString = null;
         String[] totalLines = new String[22]; //value altered according to each csv File(i.e.lines)
-        char[] Csv1FieldName = new char[22]; //value altered according to each csv File(i.e.lines)
-        char[] Csv2FieldCarPlate = new char[22]; //value altered according to each csv File(i.e.lines)
-        char[] Csv3FieldCarModel = new char[22]; //value altered according to each csv File(i.e.lines)
-        char[] Csv4FieldCarDate = new char[22]; //value altered according to each csv File(i.e.lines)
-        char[] Csv5FieldCarFine = new char[22]; //value altered according to each csv File(i.e.lines)
+        //String[] cSVLine = new String[22]; //value altered according to each csv File(i.e.lines)
+        List<String> cSV1Line = new ArrayList<String>();
+        List<String> cSV2Line = new ArrayList<String>();
+        List<String> cSV3Line = new ArrayList<String>();
+        List<String> cSV4Line = new ArrayList<String>();
+        List<String> cSV5Line = new ArrayList<String>();
 
+
+        String [] CsvSplit = new String[22]; //value altered according to each csv File(i.e.lines)
         //  String[] totalLinesSplit = new String[22]; //value altered according to each csv File(i.e.lines)
-
-        File filetoOpen = new File ("example.csv");
+       // char[] charArray = new char[22];
+                File filetoOpen = new File ("example.csv");
         try {
             Scanner scannerInput = new Scanner(System.in); //user input scanner
             Scanner scanner = new Scanner(filetoOpen); //scanner regarding the file
@@ -35,34 +41,23 @@ public class Main {
              while(scanner.hasNextLine()){//while it has a line to read repeat...
                 inputString = scanner.nextLine();
                 totalLines[c] = inputString;
-                String [] CsvSplit = inputString.split(",");
-                Csv1FieldName[c] =  CsvSplit[0].toCharArray();
-                //System.out.println(Csv1FieldName);
-                Csv2FieldCarPlate = CsvSplit[1].toCharArray();
-                //System.out.println(Csv2FieldCarPlate);
-               // System.out.print("wwwwwww"+Csv2FieldCarPlate[c]);
-                Csv3FieldCarModel = CsvSplit[2].toCharArray();
-                //System.out.println(Csv3FieldCarModel);
-                Csv4FieldCarDate = CsvSplit[3].toCharArray();
-                //System.out.println(Csv4FieldCarDate);
-                Csv5FieldCarFine = CsvSplit[4].toCharArray();
-                //System.out.println(Csv5FieldCarFine);
-
-                //char[] charGuessWord = guessword.toCharArray();
-                //System.out.println("WOW"+fineCsvField);
-                //System.out.println("WOW"+CsvSplit[3]);
-
-
-        //        totalLinesSplit[c] = String.valueOf(totalLines[c].split(",", 5));
-
-
+                CsvSplit = inputString.split(",");
+                //char [] charArray = inputString.toCharArray();
+                //cSVLine[c] = CsvSplit[0]+CsvSplit[1]+CsvSplit[2]+CsvSplit[3]+CsvSplit[4];
+                 cSV1Line.add(CsvSplit[0]);
+                 cSV2Line.add(CsvSplit[1]);
+                 cSV3Line.add(CsvSplit[2]);
+                 cSV4Line.add(CsvSplit[3]);
+                 cSV5Line.add(CsvSplit[4]);
                //System.out.println("->totalLines["+c+"] = "+totalLines[c]);
                 //System.out.println("->totalLinesSplit["+c+"] = "+totalLinesSplit[c]);
 
                 c++;
             // totalLines[c].split(",");
               }
-            System.out.println(Csv1FieldName[0]);
+
+            System.out.println(cSV1Line);
+            System.out.println(cSV1Line.get(1));
             System.out.println("\n===//===\n"); //beautiful command line separator
 
 

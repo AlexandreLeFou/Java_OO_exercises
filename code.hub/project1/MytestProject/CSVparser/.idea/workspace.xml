@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c6f5801-56b1-442c-862e-03036b074f84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/CSVparser/codeHubAssignement/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/codeHubAssignement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codeHubAssignement/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,12 +52,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="2" />
-          <entry key="java" value="626" />
+          <entry key="java" value="858" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="626" />
+          <entry key="JAVA" value="858" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -79,10 +80,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/codeHubAssignement/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+            <state relative-caret-position="350">
+              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#540#548#0" expanded="true" />
+                <element signature="e#646#654#0" expanded="true" />
+                <element signature="e#703#711#0" expanded="true" />
+                <element signature="e#760#768#0" expanded="true" />
+                <element signature="e#825#833#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,6 +121,12 @@
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="977" />
@@ -142,7 +154,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542973396594" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542974876955" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -221,7 +233,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3295302" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -244,10 +256,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/codeHubAssignement/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+        <state relative-caret-position="350">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#540#548#0" expanded="true" />
+            <element signature="e#646#654#0" expanded="true" />
+            <element signature="e#703#711#0" expanded="true" />
+            <element signature="e#760#768#0" expanded="true" />
+            <element signature="e#825#833#0" expanded="true" />
           </folding>
         </state>
       </provider>
