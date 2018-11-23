@@ -1,0 +1,1 @@
+A simple java application in order to play around try-catch and java.util.scanner .
