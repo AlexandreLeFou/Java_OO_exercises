@@ -81,7 +81,7 @@ public class Main {
                 if (position==-1){System.out.println("Δεν υπαρχει το πεδιο"); }
                 else {System.out.println("Το ονομα που εδωσες: "+cSV1Line.get(position)+"," +
                         "εμφανιζεται " +c+" φορες και " +"βρισκεται στην θεση: "
-                        +position+"Aυτο εχει πινακιδα:"+cSV2Line.get(position));}
+                        +position+"Aυτο εχει πινακιδα: "+cSV2Line.get(position));}
 
 
 
