@@ -13,7 +13,7 @@ public class Main {
 
 
         try {
-            // connect to database
+            // connect to database- change password/username as per ur pc
             myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", "aekara21");
 
             System.out.println("Database connection successful!\n");
