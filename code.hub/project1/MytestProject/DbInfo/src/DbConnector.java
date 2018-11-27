@@ -1,11 +1,11 @@
 import java.sql.*;
 import java.util.InputMismatchException;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class DbConnector {
 
     public void dbcall() throws SQLException {
-        Scanner scanner = new Scanner(System.in); //so as to select insert,update,delete
+  //      Scanner scanner = new Scanner(System.in); //so as to select insert,update,delete
         Connection myConn = null;
         Statement myStmt = null;
         ResultSet myRs = null;
@@ -21,16 +21,16 @@ public class DbConnector {
             myStmt = myConn.createStatement();
 
             //Insert values(id is set to Auto increment so no need to add value):
-            System.out.println("Gimme me a number: 1 to Insert some predefined data(or press anything else to continue):");
-            try {
-                int userInput = scanner.nextInt();
-                if (userInput == 1) {
-                    System.out.println("I am inserting successfully ");
-                    int newValues = myStmt.executeUpdate("insert into dbproject1.car_plate_data" +
-                        "(FullName,PlateNumber,CarModel,ExpirationDatestamp)" +
-                        "values " + "('Akis Pap','ABC-1243', 'Mercedes','12-aug-2202')");
-                }
-            }catch (InputMismatchException exception) {System.out.println("Wrong Input.. I'll display all the db's records regarding\nFullname, Car Plate");}
+          //  System.out.println("Gimme me a number: 1 to Insert some predefined data(or press anything else to continue):");
+     //       try {
+    //            int userInput = scanner.nextInt();
+      //          if (userInput == 1) {
+                    // System.out.println("I am inserting successfully ");
+        //            int newValues = myStmt.executeUpdate("insert into dbproject1.car_plate_data" +
+            //                "(FullName,PlateNumber,CarModel,ExpirationDatestamp)" +
+              //              "values " + "('Akis Pap','ABC-1243', 'Mercedes','12-aug-2202')");
+       //         }
+       //     }catch (InputMismatchException exception) {System.out.println("Wrong Input.. I'll display all the db's records regarding\nFullname, Car Plate");}
 
             // Execute SQL query
             myRs = myStmt.executeQuery("SELECT * FROM dbproject1.car_plate_data;");
@@ -38,7 +38,7 @@ public class DbConnector {
 
             // Process result set
             while (myRs.next()) {
-                System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber"));
+                System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber")+", " + myRs.getString("ExpirationDatestamp"));
             }
         } catch (Exception exc) {
             exc.printStackTrace();
