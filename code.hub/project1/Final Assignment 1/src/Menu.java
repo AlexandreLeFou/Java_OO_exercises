@@ -20,7 +20,7 @@ public class Menu {
     public void vehicleInsuranceStatus(List<Vehicles> vehiclesInf, String licensePlate, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo ) throws Exception {
 
         ExportFile fileExport = new ExportFile();
-       if (writeTo==2){ fileExport.writeToCsv("vehicleInsuranceStatus.csv", "No match found");} //if selected write to csv->create empty file with no match entry.If we find something overwrite this value...
+       if (writeTo==2){ fileExport.writeToCsv("vehicleInsuranceStatus.csv", "No match found");System.out.println("CSV file generated");} //if selected write to csv->create empty file with no match entry.If we find something overwrite this value...
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date()); //timeStamp h shmerini imerominia
         LocalDate ldA = LocalDate.parse(timeStamp); // y simerini imerominia stin ldA
@@ -45,8 +45,7 @@ public class Menu {
                             //    System.out.println("wpapapapappapapapaaaaaaaaaaaaaa");
                             System.out.println("Your insurance ends at: " + V.getFinishDayInsu());
                         } else {
-                            //   System.out.println("wpapapapappapapapaaaaaaaaaaaaaaprint");
-                            fileExport.writeToCsv("vehicleInsuranceStatus.csv", ("Your insurance ends at: " + finishDate));
+                              fileExport.writeToCsv("vehicleInsuranceStatus.csv", ("Your insurance ends at: " + finishDate));
                         }
                     }
                 }
@@ -78,10 +77,10 @@ public class Menu {
     }
     }
 
-    //TODO F2
+    //TODO F2 user input to days q variable dld
     public void forecomingExpiries(List<Vehicles> vehiclesInf, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo) throws Exception {
         ExportFile fileExport = new ExportFile();
-        if (writeTo==2){  fileExport.writeToCsv("forecomingExpiries.csv", " ");}
+        if (writeTo==2){ fileExport.writeToCsv("forecomingExpiries.csv", "No match found");System.out.println("CSV file generated");} //if selected write to csv->create empty file with no match entry.If we find something overwrite this value...
 
         if (readFrom==1) {
 
@@ -104,10 +103,12 @@ public class Menu {
                    //System.out.println("You have insurance until " + V.getFinishDayInsu());
                    if (daysBetween < q) {
                        if (writeTo == 1) {
-                           System.out.println("The cars insurance with plate number " + V.getPlateNumber() + " is about to expire");
+                           System.out.println("The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
                        }
                        else if(writeTo==2) {
-                           fileExport.appendToCsv("forecomingExpiries.csv", "The cars insurance with plate number " + V.getPlateNumber() + " is about to expire");
+                           if (readFrom==1) {fileExport.writeToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire."); readFrom++;}
+                               fileExport.appendToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
+
 
                        }
                        }
@@ -136,10 +137,11 @@ public class Menu {
                    //System.out.println("You have insurance until " + V.getFinishDayInsu());
                    if (daysBetween < q) {
                        if (writeTo == 1) {
-                           System.out.println("The cars insurance with plate number " + V.getPlateNumber() + " is about to expire");
+                           System.out.println("The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
                        }
                        else if(writeTo==2) {
-                           fileExport.appendToCsv("forecomingExpiries.csv", "The cars insurance with plate number " + V.getPlateNumber() + " is about to expire");
+                           if (readFrom==2) {fileExport.writeToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire."); readFrom++;}
+                           fileExport.appendToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
                        }
                    }
                }
