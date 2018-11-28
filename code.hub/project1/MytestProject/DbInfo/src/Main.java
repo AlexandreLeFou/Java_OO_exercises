@@ -15,8 +15,8 @@ public class Main {
             System.out.println("OLE OLE OLE 2"+myDatabase.columnCarPlate);
             System.out.println("OLE OLE OLE 3"+myDatabase.columnDate);
 
-            //fileExport.writeToCsvDb("exportFile2.csv",myDatabase.columnFullName.toString());
-            //fileExport.appendToCsvDb("exportFile2.csv",myDatabase.columnDate.toString());
+            //fileExport.writeToCsvDb("exportFile3.csv",myDatabase.columnFullName.toString());
+            fileExport.appendToCsvDb("exportFile3.csv",myDatabase.columnDate.toString());
 
 
         } catch (Exception e) {

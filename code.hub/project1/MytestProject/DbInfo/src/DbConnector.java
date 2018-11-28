@@ -1,23 +1,23 @@
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Scanner;
 //import java.util.Scanner;
 
 public class DbConnector {
-    //LinkedList<String> databaseInfos = new LinkedList<String>();
-    List<String> columnFullName = new ArrayList<String>();
-    List<String> columnCarPlate = new ArrayList<String>();
-    List<String> columnDate = new ArrayList<String>();
+    ArrayList<String> columnFullName = new ArrayList<String>();
+    ArrayList<String> columnCarPlate = new ArrayList<String>();
+    ArrayList<String> columnDate = new ArrayList<String>();
+    ArrayList<String>  columnCarModel = new ArrayList<String>();
 
 
+    //            vehiclesInf.add(new Vehicles(csvR[0], csvR[1], csvR[2], csvR[3]));
 
     public void dbcall() throws SQLException {
-  //      Scanner scanner = new Scanner(System.in); //so as to select insert,update,delete
+        Scanner scanner = new Scanner(System.in); //so as to select insert,update,delete
         Connection myConn = null;
         Statement myStmt = null;
         ResultSet myRs = null;
+
 
 
         try {
@@ -29,19 +29,17 @@ public class DbConnector {
             // Create a statement
             myStmt = myConn.createStatement();
 
-            // Execute SQL query
             myRs = myStmt.executeQuery("SELECT * FROM dbproject1.car_plate_data;");
 
 
             // Process result set
             while (myRs.next()) {
-                System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber")+", " + myRs.getString("ExpirationDatestamp"));
+                System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber"));
                 columnFullName.add(myRs.getString("FullName"));
                 columnCarPlate.add(myRs.getString("PlateNumber"));
                 columnDate.add(myRs.getString("ExpirationDatestamp"));
+                columnCarModel.add(myRs.getString("CarModel"));
             }
-
-
         } catch (Exception exc) {
             exc.printStackTrace();
         } finally {
@@ -58,4 +56,6 @@ public class DbConnector {
             }
         }
     }
+
+
 }
