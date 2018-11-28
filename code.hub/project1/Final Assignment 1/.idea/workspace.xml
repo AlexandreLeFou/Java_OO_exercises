@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bad12af-8df2-422d-a5cd-2413a2fac888" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ExportFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExportFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,12 +83,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="63" />
-          <entry key="java" value="1904" />
+          <entry key="java" value="2078" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1904" />
+          <entry key="JAVA" value="2078" />
           <entry key="PLAIN_TEXT" value="63" />
         </counts>
       </usages-collector>
@@ -96,11 +96,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="79" column="53" lean-forward="true" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+            <state relative-caret-position="456">
+              <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,15 +117,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1429">
-              <caret line="298" column="38" selection-start-line="298" selection-start-column="27" selection-end-line="298" selection-end-column="38" />
+            <state relative-caret-position="79">
+              <caret line="157" column="129" selection-start-line="157" selection-start-column="129" selection-end-line="157" selection-end-column="129" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#validLicensePlate#0;class#Menu#0" />
                 <element signature="method#vehicleInsuranceStatus#0;class#Menu#0" />
+                <element signature="method#platesOrder#0;class#Menu#0" />
                 <element signature="e#9437#9438#0" expanded="true" />
                 <element signature="e#9526#9527#0" expanded="true" />
               </folding>
@@ -207,9 +208,10 @@
       <find>vehicleInsuranceStatus</find>
       <find>q</find>
       <find>writeTo</find>
-      <find>provide</find>
       <find>WSE</find>
       <find>appendToCsv</find>
+      <find>provide</find>
+      <find>numeri</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -223,10 +225,10 @@
         <option value="$PROJECT_DIR$/example1.csv" />
         <option value="$PROJECT_DIR$/src/Vehicles.java" />
         <option value="$PROJECT_DIR$/src/DbConnector.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/example.csv" />
         <option value="$PROJECT_DIR$/src/ExportFile.java" />
         <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -267,7 +269,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543435802081" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543436303504" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../mysql-connector-java-8.0.13/mysql-connector-java-8.0.13.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -344,7 +346,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4986577" visible="true" weight="0.4067245" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4986577" visible="true" weight="0.28308025" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -484,16 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="79" column="53" lean-forward="true" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -503,14 +495,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1429">
-          <caret line="298" column="38" selection-start-line="298" selection-start-column="27" selection-end-line="298" selection-end-column="38" />
+        <state relative-caret-position="79">
+          <caret line="157" column="129" selection-start-line="157" selection-start-column="129" selection-end-line="157" selection-end-column="129" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#validLicensePlate#0;class#Menu#0" />
             <element signature="method#vehicleInsuranceStatus#0;class#Menu#0" />
+            <element signature="method#platesOrder#0;class#Menu#0" />
             <element signature="e#9437#9438#0" expanded="true" />
             <element signature="e#9526#9527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

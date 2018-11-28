@@ -293,7 +293,7 @@ else if(readFrom == 2) {
             Integer tab = entry.getValue();
             // do something with key and/or tab
             if (writeTo==1){
-            System.out.println("O " +key+ " χρωστάει " + tab*fine);
+            System.out.println("The owner " +key+ " is obligated to pay a fine of: " + tab*fine+"€");
         }
         else if (writeTo==2){
                 fileExport.appendToCsv("fineCalcByOwner.csv", "O " +key+ " χρωστάει " + tab*fine);

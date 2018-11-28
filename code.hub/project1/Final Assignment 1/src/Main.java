@@ -93,9 +93,17 @@ public class Main {
                         readFrom = keyboard.nextInt();
                         System.out.println("--Where do you want to write the data\n*1 Console\n*2 CSV");
                         writeTo = keyboard.nextInt();
-                        System.out.println("Type the amount of the fine");
-                        double fine = keyboard.nextInt(); //try catch >>
-                        menu.fineCalcByOwner(vehiclesInf, vehiclesInfDB,readFrom, writeTo, fine);
+                        System.out.println("Type the amount of the fine(for non integer values please separate decimal-floating with comma" +
+                                " (e.g. 12,2 or 344,532 or etc.)");
+                        //try catch >>
+                        try {
+                            double fine = keyboard.nextInt();
+                            menu.fineCalcByOwner(vehiclesInf, vehiclesInfDB,readFrom, writeTo, fine);
+                        } catch (InputMismatchException exception) {
+                            System.out.println("You have typed something wrongly. \nRe execute and be careful.");
+                            return; //if user promps wrong number the program closes all together
+                        }
+
                         break;
 
                     default:
