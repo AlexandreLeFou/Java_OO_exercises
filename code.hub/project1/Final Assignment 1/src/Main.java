@@ -21,13 +21,13 @@ public class Main {
         }
         int i = 0;
         for(i=0; i<myDatabase.columnFullName.size(); i++) {
-            System.out.println("hello111111111111");
+            //System.out.println("hello111111111111");
             vehiclesInfDB.add(new Vehicles(myDatabase.columnFullName.get(i), myDatabase.columnCarPlate.get(i),
                     myDatabase.columnCarModel.get(i), myDatabase.columnDate.get(i)));
         }
-        for (Vehicles V : vehiclesInfDB) {
-            System.out.println(V.getFinishDayInsu() + "aaaaaaaaaaaaaaaaaaa");
-        }
+        //for (Vehicles V : vehiclesInfDB) {
+       //     System.out.println(V.getFinishDayInsu() + "aaaaaaaaaaaaaaaaaaa");
+       // }
 
         String file = "example.csv";
         // TODO read csv file

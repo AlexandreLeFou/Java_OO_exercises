@@ -24,7 +24,7 @@ public class DbConnector {
             // connect to database- change password/username as per ur pc
             myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", "aekara21");
 
-            System.out.println("Database connection successful!\n");
+            //System.out.println("Database connection successful!\n");
 
             // Create a statement
             myStmt = myConn.createStatement();
@@ -47,7 +47,7 @@ public class DbConnector {
 
             // Process result set
             while (myRs.next()) {
-                System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber"));
+                //System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber"));
                 columnFullName.add(myRs.getString("FullName"));
                 columnCarPlate.add(myRs.getString("PlateNumber"));
                 columnDate.add(myRs.getString("ExpirationDatestamp"));
