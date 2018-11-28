@@ -46,7 +46,7 @@ public class Main {
             int choice;
             int readFrom;
             int writeTo;
-            int days;
+          //  int days;
 
 
             do {
@@ -54,9 +54,10 @@ public class Main {
 
                 choice = keyboard.nextInt();
                 switch (choice) {
-                    case 1:do{
-                        System.out.println("Provide a license plate with the correct format (Format: ABC-1234):");
+                    case 1:
+                        do{
                         licensePlate = keyboard.nextLine();
+                        System.out.println("Provide a license plate with the correct format (Format: ABC-1234):");
                     }while (!menu.validLicensePlate(licensePlate));
                         System.out.println("--Where you want to bring data from\n*1 CSV\n*2 DB");
                         readFrom = keyboard.nextInt();
