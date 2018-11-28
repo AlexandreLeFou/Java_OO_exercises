@@ -33,29 +33,27 @@ public class Menu {
         if (readFrom == 1) {//csv
             for (Vehicles V : vehiclesInf) {
                 String finishDate = V.getFinishDayInsu();  //x Η ΗΜΕΡΟΜΗΝΙΑ Π ΤΕΛΕΙΩΝΕΙ Η ΑΣΦΑΛΕΙΑ
-                LocalDate ldB = LocalDate.parse(finishDate); //x h hmerominia p teleionei stin ldb
+                // LocalDate ldB = LocalDate.parse(finishDate); //x h hmerominia p teleionei stin ldb
                 Date date2 = sdf.parse(finishDate);
                 if (V.getPlateNumber().equals(licensePlate)) {    // test gia sigkrisi ktl
-                   System.out.println("ime mesa");
-                  //  System.out.println("aaaaaaaa DAte2:"+date2);
-                  //  System.out.println("bbbbbbbbb  "+date2.after(date1));
+                   // System.out.println("ime mesa");
+                    //  System.out.println("aaaaaaaa DAte2:"+date2);
+                    //  System.out.println("bbbbbbbbb  "+date2.after(date1));
                     if (date2.after(date1)) {
-                        if (writeTo == 1){
-                        //    System.out.println("wpapapapappapapapaaaaaaaaaaaaaa");
+                        readFrom++;
+                        if (writeTo == 1) {
+                            //    System.out.println("wpapapapappapapapaaaaaaaaaaaaaa");
                             System.out.println("Your insurance ends at: " + V.getFinishDayInsu());
-                        }
-                        else {
-                         //   System.out.println("wpapapapappapapapaaaaaaaaaaaaaaprint");
-                            fileExport.appendToCsv("vehicleInsuranceStatus.csv", ("Your insurance ends at: " + finishDate));
+                        } else {
+                            //   System.out.println("wpapapapappapapapaaaaaaaaaaaaaaprint");
+                            fileExport.writeToCsv("vehicleInsuranceStatus.csv", ("Your insurance ends at: " + finishDate));
                         }
                     }
-                    }else{ //console log if not match found a message
-                    System.out.println("No match found");
-                    break;
                 }
 
             }
-            }
+            if (readFrom==1) {System.out.println("No match found");}
+        }
         else if (readFrom==2) {//db
             // *********************FOR DB*******************\\
 
@@ -67,6 +65,7 @@ public class Menu {
                 if (V.getPlateNumber().equals(licensePlate)) {    // test gia sigkrisi ktl
 
                     if (date2.after(date1)) {
+                        readFrom++;
                         if (writeTo == 1){
                             System.out.println("Your insurance ends at: " + V.getFinishDayInsu());
                         }
@@ -74,11 +73,8 @@ public class Menu {
                             fileExport.writeToCsv("vehicleInsuranceStatus.csv", "Your insurance ends at: " + V.getFinishDayInsu());
                         }
                     }
-                }else{ //console log if not match found a message
-                    System.out.println("No match found");
-                    break;
-            }
-        }
+                }
+        }if (readFrom==2) {System.out.println("No match found");}
     }
     }
 
