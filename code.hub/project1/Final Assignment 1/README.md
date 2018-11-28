@@ -16,4 +16,4 @@ The purpose of this exercise was to confirm, justify and consolidate all the lea
 4. In case an owner had one or more uninsured vehicles, the application would calculate the total fine cost, according to a fine which was provided as an argument in the prompt.
 
 
-The project was developed in collaboration with: [Giorgos Anagnostakis](https://github.com/GiorgosAnagnostakis) and [Kostas Beroukas](https://www.linkedin.com/in/kostas-beroukas/) .
+The project was developed in collaboration with: [Giorgos Anagnostakis](https://github.com/GiorgosAnagnostakis) and [Kostas Beroukas](https://github.com/KostasGit) .
