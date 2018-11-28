@@ -1,4 +1,5 @@
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -52,7 +53,14 @@ public class Main {
             do {
                 System.out.println("---Select Functionality to perform:\n*1 Vehicle Insurance status\n*2 Forecoming Expiries\n*3 Expiries by plate\n*4 Fine Calculation by Owner");
 
-                choice = keyboard.nextInt();
+                try {
+                    choice = keyboard.nextInt();
+                } catch (InputMismatchException exception) {
+                    System.out.println("You have not typed an Integer so the program shall exit..\nRe execute and be careful.");
+                    return; //if user promps wrong number the program closes all together
+                }
+
+
                 switch (choice) {
                     case 1:
                         do{

@@ -77,7 +77,7 @@ public class Menu {
     //TODO F2
     public void forecomingExpiries(List<Vehicles> vehiclesInf, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo) throws Exception {
         ExportFile fileExport = new ExportFile();
-        fileExport.writeToCsv("forecomingExpiries.csv", " ");
+        if (writeTo==2){  fileExport.writeToCsv("forecomingExpiries.csv", " ");}
 
         if (readFrom==1) {
 
