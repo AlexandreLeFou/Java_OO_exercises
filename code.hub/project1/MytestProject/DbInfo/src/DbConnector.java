@@ -1,8 +1,17 @@
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.List;
 //import java.util.Scanner;
 
 public class DbConnector {
+    //LinkedList<String> databaseInfos = new LinkedList<String>();
+    List<String> columnFullName = new ArrayList<String>();
+    List<String> columnCarPlate = new ArrayList<String>();
+    List<String> columnDate = new ArrayList<String>();
+
+
 
     public void dbcall() throws SQLException {
   //      Scanner scanner = new Scanner(System.in); //so as to select insert,update,delete
@@ -20,18 +29,6 @@ public class DbConnector {
             // Create a statement
             myStmt = myConn.createStatement();
 
-            //Insert values(id is set to Auto increment so no need to add value):
-          //  System.out.println("Gimme me a number: 1 to Insert some predefined data(or press anything else to continue):");
-     //       try {
-    //            int userInput = scanner.nextInt();
-      //          if (userInput == 1) {
-                    // System.out.println("I am inserting successfully ");
-        //            int newValues = myStmt.executeUpdate("insert into dbproject1.car_plate_data" +
-            //                "(FullName,PlateNumber,CarModel,ExpirationDatestamp)" +
-              //              "values " + "('Akis Pap','ABC-1243', 'Mercedes','12-aug-2202')");
-       //         }
-       //     }catch (InputMismatchException exception) {System.out.println("Wrong Input.. I'll display all the db's records regarding\nFullname, Car Plate");}
-
             // Execute SQL query
             myRs = myStmt.executeQuery("SELECT * FROM dbproject1.car_plate_data;");
 
@@ -39,7 +36,12 @@ public class DbConnector {
             // Process result set
             while (myRs.next()) {
                 System.out.println(myRs.getString("FullName") + ", " + myRs.getString("PlateNumber")+", " + myRs.getString("ExpirationDatestamp"));
+                columnFullName.add(myRs.getString("FullName"));
+                columnCarPlate.add(myRs.getString("PlateNumber"));
+                columnDate.add(myRs.getString("ExpirationDatestamp"));
             }
+
+
         } catch (Exception exc) {
             exc.printStackTrace();
         } finally {
