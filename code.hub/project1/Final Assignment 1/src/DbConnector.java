@@ -22,7 +22,7 @@ public class DbConnector {
 
         try {
             // connect to database- change password/username as per ur pc
-            myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", "bukomk5t1");
+            myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", "aekara21");
 
             System.out.println("Database connection successful!\n");
 
@@ -42,7 +42,7 @@ public class DbConnector {
            // }catch (InputMismatchException exception) {System.out.println("Wrong Input.. I'll display all the db's records regarding\nFullname, Car Plate");}
 
             // Execute SQL query
-            myRs = myStmt.executeQuery("SELECT * FROM project1.car_plate_data;");
+            myRs = myStmt.executeQuery("SELECT * FROM dbproject1.car_plate_data;");
 
 
             // Process result set
