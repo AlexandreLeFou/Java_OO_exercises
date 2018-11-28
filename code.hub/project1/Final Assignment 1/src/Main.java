@@ -64,9 +64,9 @@ public class Main {
                 switch (choice) {
                     case 1:
                         do{
-                        licensePlate = keyboard.nextLine();
                         System.out.println("Provide a license plate with the correct format (Format: ABC-1234):");
-                    }while (!menu.validLicensePlate(licensePlate));
+                        licensePlate = keyboard.next();
+                        }while (!menu.validLicensePlate(licensePlate));
                         System.out.println("--Where you want to bring data fromAAAA\n*1 CSV\n*2 DB");
                         readFrom = keyboard.nextInt();
                         System.out.println("--Where do you want to write the data\n*1 Console\n*2 CSV");
