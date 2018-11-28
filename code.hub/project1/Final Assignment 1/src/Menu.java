@@ -141,7 +141,7 @@ public class Menu {
                            System.out.println("The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
                        }
                        else if(writeTo==2) {
-                           if (readFrom==2) {fileExport.writeToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire."); readFrom++;}
+                           if (readFrom==2) {fileExport.writeToCsv("forecomingExpiries.csv", "PlateNumber" + V.getPlateNumber()); readFrom++;}
                            fileExport.appendToCsv("forecomingExpiries.csv", ","+V.getPlateNumber());
                        }
                    }
@@ -237,8 +237,11 @@ public class Menu {
     //TODO F4
     public void fineCalcByOwner(List<Vehicles> vehiclesInf,List<Vehicles> vehiclesInfDB, int readFrom, int writeTo, double fine) throws Exception {
 
+
+
         ExportFile fileExport = new ExportFile();
-        fileExport.writeToCsv("fineCalcByOwner.csv", " ");
+        //fileExport.writeToCsv("fineCalcByOwner.csv", " ");
+        if (writeTo==2){ fileExport.writeToCsv("fineCalcByOwner.csv", "No match found"); System.out.println("Csv will be generated");}
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date()); //timeStamp h shmerini imerominia
         LocalDate ldA = LocalDate.parse(timeStamp); // y simerini imerominia stin ldA
@@ -269,6 +272,7 @@ public class Menu {
         }
         //************************DB*********************//
 else if(readFrom == 2) {
+
             for (Vehicles V : vehiclesInfDB) {
 
                 String finishDate = V.getFinishDayInsu();  //x Η ΗΜΕΡΟΜΗΝΙΑ Π ΤΕΛΕΙΩΝΕΙ Η ΑΣΦΑΛΕΙΑ
@@ -288,15 +292,19 @@ else if(readFrom == 2) {
             }
         }
         //System.out.println(Collections.singletonList(fines) + "=======");
+        int c=0; //counterfor write=2 and fine=0 case
         for ( Map.Entry<String, Integer> entry : fines.entrySet()) {
             String key = entry.getKey();
             Integer tab = entry.getValue();
             // do something with key and/or tab
             if (writeTo==1){
-            System.out.println("The owner " +key+ " is obligated to pay a fine of: " + tab*fine+"€");
+                if (fine!=0){ System.out.println("The owner " +key+ " is obligated to pay a fine of: " + tab*fine+" €.");}
+                else{ System.out.println("No user has to pay a fine!"); writeTo=0; }
         }
         else if (writeTo==2){
-                fileExport.appendToCsv("fineCalcByOwner.csv", "O " +key+ " χρωστάει " + tab*fine);
+            if (fine!=0){
+                if(c==0){fileExport.writeToCsv("fineCalcByOwner.csv", "CarOwner,FineToPay\n");c++;}
+                fileExport.appendToCsv("fineCalcByOwner.csv", key+ "," + tab*fine+"\n");}
             }
     }
 }}
