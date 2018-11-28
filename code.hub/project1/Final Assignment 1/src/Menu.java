@@ -20,7 +20,7 @@ public class Menu {
     public void vehicleInsuranceStatus(List<Vehicles> vehiclesInf, String licensePlate, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo ) throws Exception {
 
         ExportFile fileExport = new ExportFile();
-       if (writeTo==2){ fileExport.writeToCsv("vehicleInsuranceStatus.csv", "");} //if selected write to csv->create empty file
+       if (writeTo==2){ fileExport.writeToCsv("vehicleInsuranceStatus.csv", "No match found");} //if selected write to csv->create empty file with no match entry.If we find something overwrite this value...
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date()); //timeStamp h shmerini imerominia
         LocalDate ldA = LocalDate.parse(timeStamp); // y simerini imerominia stin ldA
@@ -36,20 +36,25 @@ public class Menu {
                 LocalDate ldB = LocalDate.parse(finishDate); //x h hmerominia p teleionei stin ldb
                 Date date2 = sdf.parse(finishDate);
                 if (V.getPlateNumber().equals(licensePlate)) {    // test gia sigkrisi ktl
-                   // System.out.println("ime mesa");
+                   System.out.println("ime mesa");
                   //  System.out.println("aaaaaaaa DAte2:"+date2);
-                    System.out.println("bbbbbbbbb  "+date2.after(date1));
+                  //  System.out.println("bbbbbbbbb  "+date2.after(date1));
                     if (date2.after(date1)) {
                         if (writeTo == 1){
-                            System.out.println("wpapapapappapapapaaaaaaaaaaaaaa");
-                            System.out.println("CSV format: Your insurance ends at: " + V.getFinishDayInsu());
+                        //    System.out.println("wpapapapappapapapaaaaaaaaaaaaaa");
+                            System.out.println("Your insurance ends at: " + V.getFinishDayInsu());
                         }
                         else {
-                            fileExport.appendToCsv("vehicleInsuranceStatus.csv", ("CSV Your insurance ends" + finishDate));
+                         //   System.out.println("wpapapapappapapapaaaaaaaaaaaaaaprint");
+                            fileExport.appendToCsv("vehicleInsuranceStatus.csv", ("Your insurance ends at: " + finishDate));
                         }
                     }
-                    }
+                    }else{ //console log if not match found a message
+                    System.out.println("No match found");
+                    break;
                 }
+
+            }
             }
         else if (readFrom==2) {//db
             // *********************FOR DB*******************\\
@@ -63,15 +68,18 @@ public class Menu {
 
                     if (date2.after(date1)) {
                         if (writeTo == 1){
-                            System.out.println("CSV Your insurance ends" + V.getFinishDayInsu());
+                            System.out.println("Your insurance ends at: " + V.getFinishDayInsu());
                         }
                         else {
-                            fileExport.appendToCsv("vehicleInsuranceStatus.csv", "CSV Your insurance ends" + V.getFinishDayInsu());
+                            fileExport.writeToCsv("vehicleInsuranceStatus.csv", "Your insurance ends at: " + V.getFinishDayInsu());
                         }
                     }
-                }
+                }else{ //console log if not match found a message
+                    System.out.println("No match found");
+                    break;
             }
         }
+    }
     }
 
     //TODO F2
