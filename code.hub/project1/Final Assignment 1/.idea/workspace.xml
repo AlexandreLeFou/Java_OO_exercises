@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1bad12af-8df2-422d-a5cd-2413a2fac888" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.csv" beforeDir="false" afterPath="$PROJECT_DIR$/example.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FinalProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalProject/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalProject/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalProject/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicleInsuranceStatus.csv" beforeDir="false" afterPath="$PROJECT_DIR$/vehicleInsuranceStatus.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,33 +75,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="2" />
           <entry key="java" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="6" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="43" />
+          <entry key="csv" value="27" />
+          <entry key="java" value="288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="43" />
+          <entry key="JAVA" value="288" />
+          <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="257">
+              <caret line="65" column="51" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,12 +114,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="144" column="48" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="48" />
+            <state relative-caret-position="160">
+              <caret line="22" column="127" selection-start-line="22" selection-start-column="127" selection-end-line="22" selection-end-column="127" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#9437#9438#0" expanded="true" />
+                <element signature="e#9526#9527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,7 +169,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vehicles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="525">
               <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#778#779#0" expanded="true" />
@@ -186,7 +205,11 @@
       <find>Jobi Kenson</find>
       <find>Vehicle Insurance status</find>
       <find>writeTo</find>
+      <find>mesa</find>
+      <find>WRITE THE</find>
+      <find>FOREC</find>
       <find>provide</find>
+      <find>vehicleInsuranceStatus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,18 +223,18 @@
         <option value="$PROJECT_DIR$/example1.csv" />
         <option value="$PROJECT_DIR$/src/Vehicles.java" />
         <option value="$PROJECT_DIR$/src/ExportFile.java" />
-        <option value="$PROJECT_DIR$/example.csv" />
-        <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/DbConnector.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/example.csv" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="425" />
-    <option name="y" value="-8" />
-    <option name="width" value="1920" />
-    <option name="height" value="1030" />
+    <option name="x" value="1573" />
+    <option name="y" value="-15" />
+    <option name="width" value="1536" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -244,7 +267,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543420537422" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543422557694" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../mysql-connector-java-8.0.13/mysql-connector-java-8.0.13.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -305,22 +328,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.13489933" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.10714286" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49932885" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50067115" side_tool="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3286334" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4986577" visible="true" weight="0.19432624" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4986577" visible="true" weight="0.30694142" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -349,7 +373,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>230</line>
+          <line>232</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -361,7 +385,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>227</line>
+          <line>229</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -383,7 +407,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>225</line>
+          <line>227</line>
           <properties class="Menu" method="fineCalcByOwner">
             <option name="EMULATED" value="true" />
           </properties>
@@ -406,7 +430,6 @@
     <entry file="file://$PROJECT_DIR$/exportCSV" />
     <entry file="file://$PROJECT_DIR$/fineCalcByOwner.csv" />
     <entry file="file://$PROJECT_DIR$/exportCSV.csv" />
-    <entry file="file://$PROJECT_DIR$/example.csv" />
     <entry file="file://$PROJECT_DIR$/FinalProject.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -419,7 +442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vehicles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="525">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#778#779#0" expanded="true" />
@@ -445,22 +468,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="144" column="48" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="48" />
+        <state relative-caret-position="257">
+          <caret line="65" column="51" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/example.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="225">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="22" column="127" selection-start-line="22" selection-start-column="127" selection-end-line="22" selection-end-column="127" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#9437#9438#0" expanded="true" />
+            <element signature="e#9526#9527#0" expanded="true" />
           </folding>
         </state>
       </provider>

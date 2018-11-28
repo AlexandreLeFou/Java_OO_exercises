@@ -20,37 +20,39 @@ public class Menu {
     public void vehicleInsuranceStatus(List<Vehicles> vehiclesInf, String licensePlate, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo ) throws Exception {
 
         ExportFile fileExport = new ExportFile();
-        fileExport.writeToCsv("vehicleInsuranceStatus.csv", " ");
+       if (writeTo==2){ fileExport.writeToCsv("vehicleInsuranceStatus.csv", "");} //if selected write to csv->create empty file
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date()); //timeStamp h shmerini imerominia
         LocalDate ldA = LocalDate.parse(timeStamp); // y simerini imerominia stin ldA
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         Date date1 = sdf.parse(timeStamp);
-
+        //System.out.println("aaaaaaaa DAte1:"+date1);
         //*********************FOR CSV*******************\\
 
-        if (readFrom == 1) {
+        if (readFrom == 1) {//csv
             for (Vehicles V : vehiclesInf) {
-
                 String finishDate = V.getFinishDayInsu();  //x Η ΗΜΕΡΟΜΗΝΙΑ Π ΤΕΛΕΙΩΝΕΙ Η ΑΣΦΑΛΕΙΑ
                 LocalDate ldB = LocalDate.parse(finishDate); //x h hmerominia p teleionei stin ldb
                 Date date2 = sdf.parse(finishDate);
                 if (V.getPlateNumber().equals(licensePlate)) {    // test gia sigkrisi ktl
-                    System.out.println("ime mesa");
+                   // System.out.println("ime mesa");
+                  //  System.out.println("aaaaaaaa DAte2:"+date2);
+                    System.out.println("bbbbbbbbb  "+date2.after(date1));
                     if (date2.after(date1)) {
                         if (writeTo == 1){
-                        System.out.println("CSV Your insurance ends" + V.getFinishDayInsu());
+                            System.out.println("wpapapapappapapapaaaaaaaaaaaaaa");
+                            System.out.println("CSV format: Your insurance ends at: " + V.getFinishDayInsu());
                         }
                         else {
-                            fileExport.appendToCsv("vehicleInsuranceStatus.csv", "CSV Your insurance ends" + V.getFinishDayInsu());
+                            fileExport.appendToCsv("vehicleInsuranceStatus.csv", ("CSV Your insurance ends" + finishDate));
                         }
                     }
                     }
                 }
             }
-        else if (readFrom==2){
-            //*********************FOR DB*******************\\
+        else if (readFrom==2) {//db
+            // *********************FOR DB*******************\\
 
             for (Vehicles V : vehiclesInfDB) {
 
