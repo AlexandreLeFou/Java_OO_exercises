@@ -26,7 +26,7 @@ public class ExportFile {
 
         FileWriter writer = new FileWriter(fileName, true);
 
-        writer.write("\n"+text.replaceAll("\\[", "").replaceAll("\\]",""));
+        writer.write(""+text.replaceAll("\\[", "").replaceAll("\\]",""));
 
         writer.close();
 

@@ -80,6 +80,7 @@ public class Menu {
     //TODO F2 user input to days q variable dld
     public void forecomingExpiries(List<Vehicles> vehiclesInf, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo) throws Exception {
         ExportFile fileExport = new ExportFile();
+        Scanner userInputDaysofFine = new Scanner(System.in);
         if (writeTo==2){ fileExport.writeToCsv("forecomingExpiries.csv", "No match found");System.out.println("CSV file generated");} //if selected write to csv->create empty file with no match entry.If we find something overwrite this value...
 
         if (readFrom==1) {
@@ -107,7 +108,7 @@ public class Menu {
                        }
                        else if(writeTo==2) {
                            if (readFrom==1) {fileExport.writeToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire."); readFrom++;}
-                               fileExport.appendToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
+                               fileExport.appendToCsv("forecomingExpiries.csv", ","+V.getPlateNumber());
 
 
                        }
@@ -141,7 +142,7 @@ public class Menu {
                        }
                        else if(writeTo==2) {
                            if (readFrom==2) {fileExport.writeToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire."); readFrom++;}
-                           fileExport.appendToCsv("forecomingExpiries.csv", "The car's insurance with registration plate number: " + V.getPlateNumber() + " is about to expire.");
+                           fileExport.appendToCsv("forecomingExpiries.csv", ","+V.getPlateNumber());
                        }
                    }
                }
@@ -157,7 +158,7 @@ public class Menu {
     public void platesOrder(List<Vehicles> vehiclesInf, List<Vehicles> vehiclesInfDB, int readFrom,int writeTo) throws Exception {
 
         ExportFile fileExport = new ExportFile();
-        fileExport.writeToCsv("exportCSV.csv", "Ordering list ");
+        if (writeTo==2){fileExport.writeToCsv("exportCSV.csv", "PlateNumber");}
 
         //************************CSV*********************//
 
@@ -169,6 +170,7 @@ public class Menu {
                     return o1.getPlateNumber().compareTo(o2.getPlateNumber());
                 }
             });
+            System.out.print("The car's plates registration sorting order selected is:\n\t\t\t  [Alpha-Numerical]");
             for (Vehicles V : vehiclesInf) {
 
                 String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date()); //timeStamp h shmerini imerominia
@@ -185,14 +187,14 @@ public class Menu {
 
                 if (date2.before(date1)) {
                         if (writeTo==1) {
-                            System.out.println(V.getPlateNumber() + "---");
-                        }
-                        else if (writeTo==2){
-                            fileExport.appendToCsv("exportCSV.csv", "The cars insurance with plate number " + V.getPlateNumber());
+                            System.out.print("\n\t\t\t\t "+"|"+V.getPlateNumber()+"|");
+                        }else if (writeTo==2){
+                            fileExport.appendToCsv("exportCSV.csv", ","+V.getPlateNumber());
 
                         }
                 }
             }
+
         }
 
         //************************DB*********************//
@@ -204,7 +206,9 @@ public class Menu {
                 return o1.getPlateNumber().compareTo(o2.getPlateNumber());
             }
         });
-        for (Vehicles V : vehiclesInfDB) {
+            System.out.print("The car's plates registration sorting order selected is:\n\t\t\t  [Alpha-Numerical]");
+
+            for (Vehicles V : vehiclesInfDB) {
 
             String timeStamp = new SimpleDateFormat("yyyy-MM-dd").format(new Date()); //timeStamp h shmerini imerominia
             long q = 30000; //esto oti bazei toses meres o user
@@ -219,10 +223,10 @@ public class Menu {
 
             if (date2.before(date1)) {
                 if (writeTo==1) {
-                    System.out.println(V.getPlateNumber() + "---");
+                    System.out.print("\n\t\t\t\t "+"|"+V.getPlateNumber()+"|");
                 }
                 else if (writeTo==2){
-                    fileExport.appendToCsv("exportCSV.csv", "The cars insurance with plate number " + V.getPlateNumber());
+                    fileExport.appendToCsv("exportCSV.csv", ","+V.getPlateNumber());
 
                 }
             }
