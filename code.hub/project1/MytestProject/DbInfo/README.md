@@ -6,6 +6,6 @@
 
 This repository also contains the following:
 
-- Greek instructions regarding the steps to add the JDBC driver to Intelij (+the zip-jar file itself)
+- Greek instructions regarding the steps to add the JDBC driver to Intelij (and jar file itself)
 - SQL dumps of data and structure
 - Various implementations of CSV output strings
