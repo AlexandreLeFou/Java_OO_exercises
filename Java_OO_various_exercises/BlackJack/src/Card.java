@@ -8,9 +8,11 @@ public class Card {
         this.value = value;
     }
 
-    public String toString(){ //print the value of the suit
-        return this.suit.toString()+" "+this.value.toString();
+    public String toString() { //print the value of the suit
+        return this.suit.toString() + " " + this.value.toString();
     }
 
-    public Value getValue() {  return this.value;  }
+    public Value getValue() {
+        return this.value;
+    }
 }
