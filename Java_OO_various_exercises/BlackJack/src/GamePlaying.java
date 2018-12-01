@@ -94,6 +94,7 @@ public class GamePlaying {
             playerDeck.moveAllCardsToDeck(deckWePlay);
             dealerDeck.moveAllCardsToDeck(deckWePlay);
             System.out.println("End of hand :)");
+            endRound = false;
             }
         System.out.println("GAME OVER");
         userInput.close();
