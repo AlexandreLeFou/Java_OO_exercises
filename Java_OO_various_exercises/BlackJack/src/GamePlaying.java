@@ -2,10 +2,15 @@ import java.util.Scanner;
 
 public class GamePlaying {
 
-    Deck playerDeck = new Deck();
-    Deck dealerDeck = new Deck();
-    public void startGamePlay(double playerBalanceAccount,  Deck deckWePlay) {
 
+    private double playerBalanceAccount;
+    private Deck deckWePlay;
+
+    public void startGamePlay(double playerBalanceAccount, Deck deckWePlay) {
+        this.playerBalanceAccount = playerBalanceAccount;
+        this.deckWePlay = deckWePlay;
+        Deck playerDeck = new Deck();
+        Deck dealerDeck = new Deck();
         boolean endRound = false;
 
         Scanner userInput = new Scanner(System.in);
