@@ -3,11 +3,9 @@ import java.util.Scanner;
 public class GamePlaying {
 
 
-    private double playerBalanceAccount;
     private Deck deckWePlay;
 
     public void startGamePlay(double playerBalanceAccount, Deck deckWePlay) {
-        this.playerBalanceAccount = playerBalanceAccount;
         this.deckWePlay = deckWePlay;
         Deck playerDeck = new Deck();
         Deck dealerDeck = new Deck();
@@ -67,8 +65,9 @@ public class GamePlaying {
             }
 
             while ((dealerDeck.ValueOfTotaleCards() < 16 && endRound == false)) {//dealer=min value to consider=16 and round is not over
+                dealerDeck.draw(deckWePlay);
                 System.out.println("Dealer Draws:" + dealerDeck.getCard(dealerDeck.deckSize() - 1).toString());
-                System.out.println("Dealer's cards value: " + dealerDeck.ValueOfTotaleCards());
+                System.out.println("Dealer's cards value: " + dealerDeck.ValueOfTotaleCards()); }
 
                 if ((dealerDeck.ValueOfTotaleCards() > 21) && endRound == false) {
                     System.out.println("Dealer lost! PLAYER is the winner!");
@@ -92,13 +91,13 @@ public class GamePlaying {
                     endRound = true;
                 }
 
-            }
             playerDeck.moveAllCardsToDeck(deckWePlay);
             dealerDeck.moveAllCardsToDeck(deckWePlay);
             System.out.println("End of hand :)");
-        }
+            }
         System.out.println("GAME OVER");
+        userInput.close();
+        }
+
 
     }
-
-}

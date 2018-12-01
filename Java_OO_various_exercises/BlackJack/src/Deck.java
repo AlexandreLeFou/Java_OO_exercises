@@ -67,15 +67,15 @@ public class Deck {
         comingFrom.removeCard(0);
     }
 
-    public void moveAllCardsToDeck(Deck moveTo) {
-        int thisDeckSize = this.cards.size();
-        for (int i = 0; i > thisDeckSize; i++) {
+    public  void moveAllCardsToDeck (Deck moveTo){
+        int thisDeckSize=this.cards.size();
+        for (int i=0; i>thisDeckSize; i++){
             moveTo.addCard(this.getCard(i));
         }
-        for (int i = 0; i > thisDeckSize; i++) {
+        for (int i=0; i<thisDeckSize; i++){
             this.removeCard(0);
-        }
-    }
+        }}
+
 
 
     public int ValueOfTotaleCards() {

@@ -8,7 +8,7 @@ public class Main {
 
         deckWePlay.createFullDeck(); //generate a deck
         deckWePlay.shuffleCards();   //shuffle cards
-        double playerBalanceAccount = 10000;  //original $ of the player
+        double playerBalanceAccount = 10;  //original $ of the player
 
 
 
