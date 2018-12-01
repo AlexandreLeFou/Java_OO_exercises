@@ -46,6 +46,10 @@ public class Deck {
         this.cards = deck; //original deck
     }
 
+    public int deckSize(){
+        return this.cards.size();
+    }
+
     public void removeCard(int i) {
         this.cards.remove(i);
     }
@@ -63,4 +67,66 @@ public class Deck {
         comingFrom.removeCard(0);
     }
 
+    public int ValueOfTotaleCards() {
+        int sumValue = 0;
+        int aces = 0;
+
+        for (Card card : this.cards) {
+            switch ((card.getValue())) {
+                case TWO:
+                    sumValue += 2;
+                    break;
+                case THREE:
+                    sumValue += 3;
+                    break;
+                case FOUR:
+                    sumValue += 4;
+                    break;
+                case FIVE:
+                    sumValue += 5;
+                    break;
+                case SIX:
+                    sumValue += 6;
+                    break;
+                case SEVEN:
+                    sumValue += 7;
+                    break;
+                case EIGHT:
+                    sumValue += 8;
+                    break;
+                case NINE:
+                    sumValue += 9;
+                    break;
+                case TEN:
+                    sumValue += 10;
+                    break;
+                case JACK:
+                    sumValue += 10;
+                    break;
+                case QUEEN:
+                    sumValue += 10;
+                    break;
+                case KING:
+                    sumValue += 10;
+                    break;
+                case ACE:
+                    sumValue += 1;
+                    break;
+
+            }
+
+            //Aces worth 11 or 1 - if 11 would go over 21 make it worth 1
+            for (int i = 0; i < aces; i++) { //total current value with aces
+                //If they're already at over 10 getting an ace valued at 11=22 so... make ace=1
+                if (sumValue > 10) {
+                    sumValue += 1;
+                } else {
+                    sumValue += 11;
+                }
+            }
+
+
+        }
+    }
 }
+
