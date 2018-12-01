@@ -39,7 +39,7 @@ public class Deck {
         int randomCardIndex;
         int originalSizeOfDeck = this.cards.size();
         for (int i = 0; i < originalSizeOfDeck; i++) { //for all deck's cards remove cads and remember the remaining cards
-            randomCardIndex = random.nextInt((this.cards.size() - 1) + 1) + 0; // random.nextInt((max-min)+1)+min;
+            randomCardIndex = random.nextInt((this.cards.size() - 1) + 1) ; // random.nextInt((max-min)+1)+min;
             deck.add(this.cards.get(randomCardIndex)); //add card to the deck
             this.cards.remove(randomCardIndex); //remove from total hand a card
         }
@@ -66,6 +66,16 @@ public class Deck {
         this.cards.add(comingFrom.getCard(0));//first card from the deck
         comingFrom.removeCard(0);
     }
+
+    public  void moveAllCardsToDeck (Deck moveTo){
+        int thisDeckSize=this.cards.size();
+        for (int i=0; i>thisDeckSize; i++){
+            moveTo.addCard(this.getCard(i));
+        }
+        for (int i=0; i>thisDeckSize; i++){
+            this.removeCard(0);
+        }}
+
 
     public int ValueOfTotaleCards() {
         int sumValue = 0;
@@ -125,8 +135,9 @@ public class Deck {
                 }
             }
 
-
         }
-    }
+        return sumValue;
+
+}
 }
 

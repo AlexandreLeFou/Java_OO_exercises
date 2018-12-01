@@ -12,5 +12,5 @@ public class Card {
         return this.suit.toString()+" "+this.value.toString();
     }
 
-    public Value getValue() {  return value;  }
+    public Value getValue() {  return this.value;  }
 }
