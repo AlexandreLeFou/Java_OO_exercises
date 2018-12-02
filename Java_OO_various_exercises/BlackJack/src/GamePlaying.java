@@ -67,7 +67,7 @@ public class GamePlaying {
             while ((dealerDeck.ValueOfTotaleCards() < 16 && endRound == false)) {//dealer=min value to consider=16 and round is not over
                 dealerDeck.draw(deckWePlay);
                 System.out.println("Dealer Draws:" + dealerDeck.getCard(dealerDeck.deckSize() - 1).toString());
-                System.out.println("Dealer's cards value: " + dealerDeck.ValueOfTotaleCards()); }
+              //  System.out.println("Dealer's cards value: " + dealerDeck.ValueOfTotaleCards()); }
 
                 if ((dealerDeck.ValueOfTotaleCards() > 21) && endRound == false) {
                     System.out.println("Dealer lost! PLAYER is the winner!");
