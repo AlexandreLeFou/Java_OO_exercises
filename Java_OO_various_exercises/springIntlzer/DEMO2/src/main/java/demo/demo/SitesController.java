@@ -17,11 +17,12 @@ import org.springframework.web.bind.annotation.RequestParam;
         public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
             model.addAttribute("name", name);
             return "hello";
-        }/*
-        public String names(Model model, @RequestParam(value="membersOnomata", required=false, defaultValue="A.Gazis, G.Anagnwstakis,K.Beroukas") String membersOnomata) {
+        }
+        /*@GetMapping("/hello")
+        public String namesSintelestwn(Model model, @RequestParam(value="membersOnomata", required=false, defaultValue="A.Gazis, G.Anagnwstakis,K.Beroukas") String membersOnomata) {
             model.addAttribute("membersOnomata", membersOnomata);
-            return "membersOnomata";
-        } */
+            return "namesSintelestwn";
+        }*/
 
 
 
