@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static java.lang.String.valueOf;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class StudentdalApplicationTests {
@@ -22,16 +24,19 @@ public class StudentdalApplicationTests {
     @Test
     public void testCreateStudent(){
      Student student = new Student();
-     student.setName("John");
-     student.setCourse("Java Web Services");
-     student.setFee(30d);
+     student.setName("JohnyMan");
+     student.setCourse("Java Web New");
+     student.setFee(32d);
      studentRepository.save(student); //will create a db record via creation of a insert command
 
     }
 
-   /* @Test
+    @Test
     public void testFindStudentById(){
-        Student student = studentRepository.findOne(1l);
-        System.out.println(student);
-    } */
+        Student student = new Student();
+        //https://stackoverflow.com/questions/44101061/missing-crudrepositoryfindone-method
+
+        student = studentRepository.findById(1l).orElse(null);
+        System.out.println("\n=========\n"+student+"\n=========\n");
+    }
 }
