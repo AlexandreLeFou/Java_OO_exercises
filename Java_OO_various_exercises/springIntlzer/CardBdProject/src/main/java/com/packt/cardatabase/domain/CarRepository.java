@@ -1,4 +1,6 @@
 package com.packt.cardatabase.domain;
 
-public class CarRepository {
-}
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface CarRepository extends CrudRepository <Car, Long> {}
