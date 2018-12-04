@@ -29,15 +29,19 @@ public class StudentdalApplicationTests {
      student.setFee(400d);
      studentRepository.save(student); //will create a db record via creation of a insert command
       //student = studentRepository.findById(student.getId()).orElse(null);
-      student = studentRepository.findById(5l).orElse(null);
-      student.setName("ΚςΣΤΑS");
-      student.setCourse("bEROUKAS");
-        student.setFee(400d);
+      student = studentRepository.findById(2l).orElse(null);
+      //update a value
+      student.setName("Alexandros");
+      student.setCourse("Γαζης");
+       student.setFee(12l);
       //save inserts of updates values if the value already exists it shall update it
        studentRepository.save(student); //will create a db record via creation of a insert command
-
-        System.out.println("\n Neo =========\n"+student+"\n=========\n");
+        System.out.println("\n Nea 2η εγγραφη =========\n"+student+"\n=========\n");
         //https://stackoverflow.com/questions/44101061/missing-crudrepositoryfindone-method
+        //delete the 2st record
+        //student.setId(1l);
+        studentRepository.deleteById(2L);
+               // delete(student);
 
     }
 
