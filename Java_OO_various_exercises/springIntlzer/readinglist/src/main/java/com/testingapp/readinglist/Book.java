@@ -5,8 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/** It’s annotated with @Entity designating it as a JPA entity.
- *
+/**
+ * It’s annotated with @Entity designating it as a JPA entity.
+ * <p>
  * The id property is annotated with @Id and @Generated Value to indicate that
  * this field is the entity’s identity and that its value will be auto-
  * matically provided.
@@ -40,7 +41,8 @@ public class Book {
     }
 
     public String getIsbn() {
-        return isbn;}
+        return isbn;
+    }
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
