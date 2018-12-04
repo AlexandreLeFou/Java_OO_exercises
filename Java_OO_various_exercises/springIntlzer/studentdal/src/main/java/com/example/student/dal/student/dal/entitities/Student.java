@@ -8,7 +8,7 @@ public class Student {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) //autonicrement id in the mysql db
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //autonicrement id in the mysql db
     private long id;
     @Column(name="sname") //differnet name in the db field
     private String name;

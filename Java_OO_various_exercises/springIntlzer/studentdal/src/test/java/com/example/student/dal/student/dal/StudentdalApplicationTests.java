@@ -29,9 +29,9 @@ public class StudentdalApplicationTests {
 
     }
 
-    @Test
+   /* @Test
     public void testFindStudentById(){
         Student student = studentRepository.findOne(1l);
         System.out.println(student);
-    }
+    } */
 }
