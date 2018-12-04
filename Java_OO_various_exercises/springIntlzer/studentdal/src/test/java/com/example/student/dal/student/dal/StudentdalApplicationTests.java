@@ -40,7 +40,7 @@ public class StudentdalApplicationTests {
         //https://stackoverflow.com/questions/44101061/missing-crudrepositoryfindone-method
         //delete the 2st record
         //student.setId(1l);
-        studentRepository.deleteById(2L);
+       //studentRepository.deleteById(2L);
                // delete(student);
 
     }
