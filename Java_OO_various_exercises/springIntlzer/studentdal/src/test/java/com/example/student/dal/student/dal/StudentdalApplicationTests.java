@@ -24,19 +24,28 @@ public class StudentdalApplicationTests {
     @Test
     public void testCreateStudent(){
      Student student = new Student();
-     student.setName("JohnyMan");
-     student.setCourse("Java Web New");
-     student.setFee(32d);
+     student.setName("ΚςΣΤΑS");
+     student.setCourse("bEROUKAS");
+     student.setFee(400d);
      studentRepository.save(student); //will create a db record via creation of a insert command
+      //student = studentRepository.findById(student.getId()).orElse(null);
+      student = studentRepository.findById(5l).orElse(null);
+      student.setName("ΚςΣΤΑS");
+      student.setCourse("bEROUKAS");
+        student.setFee(400d);
+      //save inserts of updates values if the value already exists it shall update it
+       studentRepository.save(student); //will create a db record via creation of a insert command
+
+        System.out.println("\n Neo =========\n"+student+"\n=========\n");
+        //https://stackoverflow.com/questions/44101061/missing-crudrepositoryfindone-method
 
     }
 
-    @Test
+  /*  @Test
     public void testFindStudentById(){
         Student student = new Student();
         //https://stackoverflow.com/questions/44101061/missing-crudrepositoryfindone-method
-
-        student = studentRepository.findById(1l).orElse(null);
+        student = studentRepository.findById(student.getId()).orElse(null);
         System.out.println("\n=========\n"+student+"\n=========\n");
-    }
+    } */
 }
