@@ -1,9 +1,15 @@
 package locationweb.locationweb.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Location {
     //fields according to the db table
-
+    @Id
     private  int id;
+    //@Column
     private String Code;
     private String name;
     private String type;
