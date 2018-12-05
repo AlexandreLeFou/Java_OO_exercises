@@ -1,21 +1,18 @@
 package locationweb.locationweb.Service;
 
 import locationweb.locationweb.entities.Location;
-import locationweb.repos.LocationRepository;
+import locationweb.locationweb.repos.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 
-@Service
-public class  LocationServiceImpl implements LocationService {
+@Service //service layer bean
+public class LocationServiceImpl implements LocationService {
 
-    @Autowired
+    @Autowired //add dependency
     private LocationRepository repository;
-
-
-
-
 
 
     public LocationRepository getRepository() {
@@ -32,17 +29,22 @@ public class  LocationServiceImpl implements LocationService {
     }
     @Override
     public Location updateLocation (Location location){
-        return null;
+        return repository.save(location);
     }@Override
-    public void Location deleteLocation (Location location){
-        //TODO Auto-generated
-    }@Override
-    public Location getLocationById (int id){
-        //TODO Auto-generated
-        return null;
-    }Override
-    public List<Location> getAllLocations (int id){
-        //TODO Auto-generated
-        return null;
+    public void deleteLocation (Location location){
+        repository.delete(location);
+    }
+
+    @Override
+    public Location getLocationById(int id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    //@Override
+   // public Location getLocationById (int id){
+   //     return repository.findById(id);}
+     @Override
+    public List<Location> getAllLocations (){
+        return repository.findAll();
     }
 }
