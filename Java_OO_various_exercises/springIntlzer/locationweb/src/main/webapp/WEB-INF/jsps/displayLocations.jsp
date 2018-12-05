@@ -2,8 +2,8 @@
          pageEncoding="UTF-8" %>
 
 
-<%@taglib uri="http://java.sun.com/jsp/jstl/core"%prefix="c"%>
-<%@page is isELIgnored="false"%>
+<%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false"%>
 
 
 <!DOCTYPE html >
@@ -26,8 +26,16 @@
     </tr>
 
 
-
+      <c:forEach items="${locations}" var="location">
+      <tr>
+        <td>${location.id}</td>
+        <td>${location.code}</td>
+        <td>${location.name}</td>
+        <td>${location.type}</td>
+      </c:forEach>
+    </tr>
 </table>
+<br><br><br>
+<a href="showCreate"> Add a New Entry </a>
 
 
-<form ac

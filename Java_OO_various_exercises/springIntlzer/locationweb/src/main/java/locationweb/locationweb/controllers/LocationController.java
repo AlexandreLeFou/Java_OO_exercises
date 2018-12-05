@@ -25,7 +25,7 @@ public class LocationController {
         return "createLocation";
     }
 
-    @RequestMapping("/saveLoc") //return the same jsp page but display the message at the end(sucess message)
+    @RequestMapping("/saveLoc") //return the same jsp page but display the message at the end(success message)
     public String saveLocation(@ModelAttribute("location") Location location, ModelMap modelMap) {
         //model attribut(retreive an object)->create bean
         Location locationSaved = service.saveLocation(location);
