@@ -42,18 +42,36 @@ public class LocationController {
         return "displayLocations";
     }
 
-    @RequestMapping("/deleteLocation")
+    @RequestMapping("deleteLocation")
     //method to handle delete
-    public String deleteLocation(@RequestParam int id) { //retreive this parameter from the url i.e. url?${}
+    public String deleteLocation(@RequestParam("id") int id,ModelMap modelMap) { //retreive this parameter from the url i.e. url?${}
         //new Location();
-        //Location location = new Location();
-        //location.setId(id);
-        Location location = service.getLocationById(id);
+        Location location = new Location();
+        location.setId(id);
+        //Location location = service.getLocationById(id);
         service.deleteLocation(location);
-
+        List<Location> locations= service.getAllLocations();
+        modelMap.addAttribute("locations",locations);
         return "displayLocations";
 
+    }
+
+    @RequestMapping("/updateLocation")
+    public String showUpdate(@RequestParam("id") int id,ModelMap modelMap) {
+        Location location =  service.getLocationById(id);
+        modelMap.addAttribute("location", location);
+        return "editLocation";
 
     }
+
+    @RequestMapping("/updateLoc")
+    public String updateLocation(@ModelAttribute("location") Location location, ModelMap modelMap){
+        service.updateLocation(location);
+        //Location location  = service.updateLocation(location); //if i wanted to retreive the location
+        return "displayLocations";
+
+    }
+
+
 
 }

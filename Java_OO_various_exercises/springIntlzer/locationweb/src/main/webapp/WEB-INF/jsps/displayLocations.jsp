@@ -30,7 +30,7 @@
         <th>code</th>
         <th>name</th>
         <th>type</th>
-        
+
     </tr>
 
 
