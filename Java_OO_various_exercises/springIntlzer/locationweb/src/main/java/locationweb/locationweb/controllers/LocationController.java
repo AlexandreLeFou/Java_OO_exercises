@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import locationweb.locationweb.entities.Location;
 
+import java.util.List;
+
 
 @Controller
 public class LocationController {
@@ -30,6 +32,12 @@ public class LocationController {
         String msg="Location saved with id:"+locationSaved.getId();
         modelMap.addAttribute("msg", msg); //see .jsp file ${} variable ;)
         return "createLocation";
+    }
+    @RequestMapping("/displayLocations")
+    public String displayLocations(ModelMap modelMap){
+        List<Location> locations = service.getAllLocations();
+        modelMap.addAttribute("locations", locations); //send it back to the response
+        return "displayLocations";
     }
 
 }
