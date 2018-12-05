@@ -60,7 +60,7 @@ public class LocationController {
     public String showUpdate(@RequestParam("id") int id,ModelMap modelMap) {
         Location location =  service.getLocationById(id);
         modelMap.addAttribute("location", location);
-        return "editLocation";
+        return "updateLocation";
 
     }
 
@@ -68,7 +68,9 @@ public class LocationController {
     public String updateLocation(@ModelAttribute("location") Location location, ModelMap modelMap){
         service.updateLocation(location);
         //Location location  = service.updateLocation(location); //if i wanted to retreive the location
-        return "displayLocations";
+        List<Location> locations= service.getAllLocations();
+        modelMap.addAttribute("locations",locations);
+        return "updateLoc";
 
     }
 
