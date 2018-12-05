@@ -9,7 +9,7 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <form action="" method="">
+    <form action="saveLoc" method="post">
       <pre>
     Id: <input type="text" name="id"/>
     Code: <input type="text" name="code"/>
