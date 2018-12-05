@@ -3,6 +3,8 @@
 
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core"%prefix="c"%>
+<%@page is isELIgnored="false"%>
+
 
 <!DOCTYPE html >
 
