@@ -70,7 +70,7 @@ public class LocationController {
         //Location location  = service.updateLocation(location); //if i wanted to retreive the location
         List<Location> locations= service.getAllLocations();
         modelMap.addAttribute("locations",locations);
-        return "updateLoc";
+        return "updateLocation";
 
     }
 
